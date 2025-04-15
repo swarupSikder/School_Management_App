@@ -43,10 +43,12 @@ class Student(Person):
         
         if len(self.subject_grade) == 0 or sum==0:
             gpa = 0
+            self.grade = 'F'
         else:
             gpa = sum/len(self.subject_grade)
-        
-        self.grade = School.gpa_to_grade(gpa)
+            self.grade = School.gpa_to_grade(gpa)
+
+        return (f'{self.name} Final Grade: {self.grade} with GPA = {gpa}\n-----------------\n\n')
     
     @property
     def id(self):
