@@ -1,0 +1,1 @@
+school.student_admission(rahim)

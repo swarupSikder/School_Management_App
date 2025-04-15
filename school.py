@@ -12,8 +12,8 @@ class School:
         self.teachers[subject] = teacher
 
     def student_admission(self, student):
-        classroom = student.classroom.name
-        self.classrooms[classroom].add_student(student)
+        classname = student.classroom.name
+        self.classrooms[classname].add_students(student)
 
     @staticmethod
     def calc_grade(marks):

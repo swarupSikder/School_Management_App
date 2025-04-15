@@ -40,7 +40,12 @@ class Student(Person):
         for grade in self.subject_grade.values():
             point = School.grade_to_gpa(grade)
             sum += point
-        gpa = sum/len(self.subject_grade)
+        
+        if len(self.subject_grade) == 0 or sum==0:
+            gpa = 0
+        else:
+            gpa = sum/len(self.subject_grade)
+        
         self.grade = School.gpa_to_grade(gpa)
     
     @property
